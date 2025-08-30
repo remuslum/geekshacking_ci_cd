@@ -1,8 +1,14 @@
 name: Hello_world
 
+# trigger
 on:
     - push
 
+# one or more jobs
 jobs:
     greetings:
-        runs-on:
+        runs-on: ubuntu-latest
+        steps:
+        - id: s00
+          # running some shell/bash command
+          run: echo "current time in GitHub is $(date)"
