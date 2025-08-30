@@ -2,7 +2,7 @@ name: Hello_world
 
 # trigger
 on:
-    - push
+    - pull_request
 
 # one or more jobs
 jobs:

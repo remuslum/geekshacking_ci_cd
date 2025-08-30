@@ -1,0 +1,26 @@
+name: build_and_release
+
+on: 
+    - push
+
+# Run act: DOCKER_HOST=unix:///var/run/docker.sock act --container-architecture linux/amd64 --bind
+
+jobs:
+    build-app:
+        runs-on: ubuntu-latest
+        steps:
+          - id: s01
+            run: echo "github $ {{ github.ref_name}}"
+        # set up the environment
+          - run: echo "before " && ls -l
+
+          - id: s02
+            uses: actions/setup-node@v4
+            with:
+                node-version: 24
+        
+          - id: s03
+            uses: actions/checkout@v5
+
+          - run: echo "after " && ls -l
+
