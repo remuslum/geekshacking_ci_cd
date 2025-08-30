@@ -17,4 +17,8 @@ jobs:
           run: ls -al
 
         - id: s02
-          run: cat ./README.md
+          uses: mscoutermarsh/cowsays-action@master
+          with:
+            text: 'Moo Moo Moo'
+            color: 'green'
+
