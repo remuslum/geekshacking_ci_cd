@@ -14,7 +14,7 @@ jobs:
           # single (>) - delete and write, double (>>) - append and add to end of file
 
           # create a value and pass to next step
-          run: echo "CURR_DATE=$(date)" >> $GITHUB_OUPUT
+          run: echo "CURR_DATE=$(date)" >> $GITHUB_OUTPUT
         
         - id: s01
           run: ls -al
